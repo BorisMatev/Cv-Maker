@@ -1,0 +1,33 @@
+#content {
+    height: 1110px;
+    position: relative;
+}
+.rightSpace {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    height: 70vh;
+    overflow-y: scroll;
+    padding: 0px;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+.profileImage{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-repeat: no-repeat;
+    background-size:cover;         
+    background-position: center;
+    background-image: url(assets/avatar.png);
+}
+.info{
+    min-width: 190px;
+}
+h6{
+    font-size:small;
+}
+h2 {
+    font-family: Times, Serif;
+    color: rgb(168, 129, 13);
+    font-style: normal;
+  }
