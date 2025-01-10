@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheForge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .bg {
+            animation: slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: .5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 4s;
+        }
+
+        .bg3 {
+            animation-duration: 5s;
+        }
+
+        .content {
+            background-color: #ffffff;
+            border-radius: .25em;
+            box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+            box-sizing: border-box;
+            left: 50%;
+            padding: 10vmin;
+            position: fixed;
+            text-align: center;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+        }
+
+        h1 {
+            font-family: monospace;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-25%);
+            }
+
+            100% {
+                transform: translateX(25%);
+            }
+        }
+
+        /* From Uiverse.io by ahmedrizk101 */
+        .button {
+            width: 200px;
+            height: 40px;
+            background: #33ae72;
+            color: whitesmoke;
+            box-shadow: -6px 6px 0 0 #5adbb5;
+            border: none;
+            outline: none;
+            position: relative;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .button:active {
+            box-shadow: -3px 3px 0 0 #5adbb5;
+            top: 3px;
+            left: -3px;
+            background-color: #33ae72d6;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            background: none;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-right: 6px solid #5adbb5;
+            border-left-width: 0;
+            top: 0;
+            left: -6px;
+        }
+
+        .button:active::before {
+            border: 3px solid transparent;
+            border-right: 3px solid #5adbb5;
+        }
+
+        .button::after {
+            content: '';
+            position: absolute;
+            background: none;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-top: 6px solid #5adbb5;
+            border-bottom-width: 0;
+            bottom: -6px;
+            right: 0;
+        }
+
+        .button:active:after {
+            border: 3px solid transparent;
+            border-top: 3px solid #5adbb5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content">
+        <p>
+            Добре дошли в The Forge - най-добрата платформа за създаване на перфектната автобиография. Точно както
+            ковачът
+            оформя метала в нещо здраво и трайно, ние ви помагаме да изковете автобиография, която да се отличава на
+            конкурентния пазар на труда. С помощта на лесни за използване инструменти и адаптивни шаблони можете да
+            създадете професионална, персонализирана автобиография, която подчертава вашите умения и опит. Изградете
+            бъдещето си днес с The Forge - там, където започва вашата кариера.
+        </p>
+        <div>
+            <h1>Направи твоето първо CV</h1>
+            <button class="button" onclick="window.location.href='/cv/'">
+                Започни сега
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
