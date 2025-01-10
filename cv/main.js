@@ -1,5 +1,4 @@
 document.getElementById('imageInput').addEventListener('change', function(event) {
-    console.log(1)
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
@@ -11,11 +10,11 @@ document.getElementById('imageInput').addEventListener('change', function(event)
       reader.readAsDataURL(file);
     }
   });
-function asd() {
+function download() {
     const element = document.getElementById('content');
     html2pdf()
         .from(element)
-        .save('download.pdf');
+        .save('myCV .pdf');
 }
 function update(value, IdForChange) {
     var inputVal = value.value; // Get the input value
