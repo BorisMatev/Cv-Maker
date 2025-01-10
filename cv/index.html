@@ -64,7 +64,7 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Телефон</label>
-                                <input type="text" class="form-control" placeholder="0000000000" 
+                                <input type="text" class="form-control" placeholder="0000000000"
                                     oninput="update(this,'phone')" maxlength="10">
                             </div>
                             <div class="mb-3">
@@ -83,14 +83,14 @@
 
                             <hr class="bg-secondary border-2 border-top border-secondary mt-2 mb-5" />
                             <h4 id="scrollspyHeading2">Трудов стаж</h4>
-                            <div id="accordion">
+                            <div id="accordion" class="mt-3 mb-5">
                                 <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link" data-toggle="collapse"
                                                 data-target="#collapseOne" aria-expanded="true"
                                                 aria-controls="collapseOne">
-                                                Collapsible Group Item #1
+                                                Добави трудов стаж
                                             </button>
                                         </h5>
                                     </div>
@@ -101,44 +101,83 @@
                                             <div class="expanded">
                                                 <div class="row">
                                                     <div class="col-6 mb-3">
-                                                        <label for="job-name" class="form-label">Job Name</label>
-                                                        <input type="text" class="form-control" placeholder="Enter job name">
+                                                        <label class="form-label">Длъжност</label>
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Главен директор" 
+                                                            oninput="update(this,'job')">
                                                     </div>
                                                     <div class="col-6 mb-3">
-                                                        <label for="company-name" class="form-label">Company Name</label>
-                                                        <input type="text" class="form-control" placeholder="Enter company name">
+                                                        <label class="form-label">Работодател</label>
+                                                        <input type="text" class="form-control" placeholder="Гугъл"
+                                                            oninput="update(this,'workplace')">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 mb-3">
+                                                        <label class="form-label">Град</label>
+                                                        <input type="text" class="form-control" placeholder="София"
+                                                            oninput="update(this,'place')">
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                        <label class="form-label">Година</label>
+                                                        <input type="text" class="form-control" placeholder="2024"
+                                                            oninput="update(this,'year')">
                                                     </div>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="job-info" class="form-label">Additional Information</label>
-                                                    <textarea class="form-control" rows="3" placeholder="Enter additional information"></textarea>
+                                                    <label for="job-info" class="form-label">Подробности</label>
+                                                    <textarea class="form-control" rows="3"
+                                                        placeholder="Основна информация"
+                                                        oninput="update(this,'details')"></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="card">
+                                <div class="card">
                                     <div class="card-header" id="headingTwo">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse"
                                                 data-target="#collapseTwo" aria-expanded="false"
                                                 aria-controls="collapseTwo">
-                                                Collapsible Group Item #2
+                                                Добави трудов стаж
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                                         data-parent="#accordion">
                                         <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
-                                            dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                                            tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                                            assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                                            wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                                            vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-                                            synth nesciunt you probably haven't heard of them accusamus labore
-                                            sustainable VHS.
+                                            <div class="row">
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Длъжност</label>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Главен директор"
+                                                        oninput="update(this,'job1')">
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Работодател</label>
+                                                    <input type="text" class="form-control" placeholder="Гугъл"
+                                                    oninput="update(this,'workplace1')">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Град</label>
+                                                    <input type="text" class="form-control" placeholder="София"
+                                                        oninput="update(this,'place1')">
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Година</label>
+                                                    <input type="text" class="form-control" placeholder="2024"
+                                                    oninput="update(this,'year1')">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="job-info" class="form-label">Подробности</label>
+                                                <textarea class="form-control" rows="3"
+                                                    placeholder="Основна информация"
+                                                    oninput="update(this,'details1')"></textarea>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -148,25 +187,47 @@
                                             <button class="btn btn-link collapsed" data-toggle="collapse"
                                                 data-target="#collapseThree" aria-expanded="false"
                                                 aria-controls="collapseThree">
-                                                Collapsible Group Item #3
+                                                Добави трудов стаж
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                         data-parent="#accordion">
                                         <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                            richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
-                                            dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                                            tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                                            assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                                            wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
-                                            vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-                                            synth nesciunt you probably haven't heard of them accusamus labore
-                                            sustainable VHS.
+                                            <div class="row">
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Длъжност</label>
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Главен директор"
+                                                        oninput="update(this,'job2')">
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Работодател</label>
+                                                    <input type="text" class="form-control" placeholder="Гугъл"
+                                                    oninput="update(this,'workplace2')">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Град</label>
+                                                    <input type="text" class="form-control" placeholder="София"
+                                                    oninput="update(this,'place2')">
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Година</label>
+                                                    <input type="text" class="form-control" placeholder="2024"
+                                                    oninput="update(this,'year2')">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="job-info" class="form-label">Подробности</label>
+                                                <textarea class="form-control" rows="3"
+                                                    placeholder="Основна информация"
+                                                    oninput="update(this,'details2')"></textarea>
+                                            </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                             <h4 id="scrollspyHeading3">Third heading</h4>
                             </h4>
@@ -240,7 +301,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-12 col-lg-6 order-1 order-lg-2 cv">
                 <div class="container mt-5 rightSpace rounded">
                     <div id="content">
@@ -251,7 +311,7 @@
                                     <div id="imageContainer"
                                         class="rounded-circle border border-light mt-3 d-flex justify-content-center align-items-center profileImage">
                                     </div>
-                                    <h2>За мен</h2>
+                                    <h2 class="times">За мен</h2>
                                     <p id="info" class="text-light"></p>
                                 </section>
                                 <div class="col-8 pt-3">
@@ -285,6 +345,70 @@
                                         </div>
                                     </div>
                                     <hr class="bg-warning border-2 border-top border-warning mt-5" />
+                                    <h3>Трудов стаж</h3>
+                                    <div class="row" style=" word-wrap: break-word;">
+                                        <div class="col-3">
+                                            <div class="pt-2">
+                                                <h5 id="workplace" class="times" style="color: black; ">Google</h5>
+                                                <h6 id="place" class="text-secondary">София</h6>
+                                                <h6 id="year" class="text-secondary">2024</h6>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"
+                                            style="width: 2px; background-color: darkgoldenrod; height: 100px;">
+                                            <div
+                                                style="width: 10px; height: 10px; background-color: black;  position: absolute; border-radius: 50%;">
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="ml-4" style=" word-wrap: break-word;">
+                                                <h5 id="job">Главен директор</h5>
+                                                <p id="details">Описание</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style=" word-wrap: break-word;">
+                                        <div class="col-3">
+                                            <div class="pt-2">
+                                                <h5 id="workplace1" class="times" style="color: black; "></h5>
+                                                <h6 id="place1" class="text-secondary"></h6>
+                                                <h6 id="year1" class="text-secondary"></h6>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"
+                                            style="width: 2px; background-color: darkgoldenrod; height: 100px;">
+                                            <div
+                                                style="width: 10px; height: 10px; background-color: black;  position: absolute; border-radius: 50%;">
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="ml-4" style=" word-wrap: break-word;">
+                                                <h5 id="job1"> </h5>
+                                                <p id="details1"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style=" word-wrap: break-word;">
+                                        <div class="col-3">
+                                            <div class="pt-2">
+                                                <h5 id="workplace2" class="times" style="color: black; "></h5>
+                                                <h6 id="place2" class="text-secondary"></h6>
+                                                <h6 id="year2" class="text-secondary"></h6>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"
+                                            style="width: 2px; background-color: darkgoldenrod; height: 100px;">
+                                            <div
+                                                style="width: 10px; height: 10px; background-color: black;  position: absolute; border-radius: 50%;">
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="ml-4" style=" word-wrap: break-word;">
+                                                <h5 id="job2"> </h5>
+                                                <p id="details2"></p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

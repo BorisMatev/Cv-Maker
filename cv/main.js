@@ -19,5 +19,4 @@ function download() {
 function update(value, IdForChange) {
     var inputVal = value.value; // Get the input value
     document.getElementById(IdForChange).innerText = inputVal; // Update the H1 text
-    localStorage.setItem(IdForChange, inputVal);
 }
