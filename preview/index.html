@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/icon.png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/cv/style.css">
+</head>
+
+<body>
+    <header style="height: 70px; background-color: cadetblue; position: fixed; width: 100vw; z-index: 2;">
+        <button class="btn btn-primary" onclick="download()"> Изтегли</button>
+    </header>
+    <div id="content">
+        <div class="container">
+            <div class="row" style="height: 1110px;">
+                <section class="col-4"
+                    style="background-color: rgba(44,58,75,255); word-wrap: break-word;">
+                    <div id="imageContainer"
+                        class="rounded-circle border border-light mt-3 d-flex justify-content-center align-items-center profileImage">
+                    </div>
+                    <h2 class="times">За мен</h2>
+                    <p id="info" class="text-light"></p>
+                </section>
+                <div class="col-8 pt-3">
+                    <div class="d-flex justify-content-between mt-5">
+                        <div class="mt-3">
+                            <h2 id="name">Име</h2>
+                            <h2 id="lastName">Фамилия</h2>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="info">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-envelope-fill mr-2 "></i>
+                                    <h6 id="email" style="margin: 0px;">email@mail.com</h6>
+                                </div>
+                                <hr class="my-2">
+                            </div>
+                            <div class="info">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-telephone-fill mr-2"></i>
+                                    <h6 style="margin: 0px;" id="phone">0000000000</h6>
+                                </div>
+                                <hr class="my-2">
+                            </div>
+                            <div class="info">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-house-door-fill mr-2"></i>
+                                    <h6 style="margin: 0px;" id="city">София</h6>
+                                </div>
+                                <hr class="my-2">
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="bg-warning border-2 border-top border-warning mt-5" />
+                    <h3>Трудов стаж</h3>
+                    <div class="row" style=" word-wrap: break-word;">
+                        <div class="col-3">
+                            <div class="pt-2">
+                                <h5 id="workplace" class="times" style="color: black; ">Google</h5>
+                                <h6 id="place" class="text-secondary">София</h6>
+                                <h6 id="year" class="text-secondary">2024</h6>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center"
+                            style="width: 2px; background-color: darkgoldenrod; height: 100px;">
+                            <div
+                                style="width: 10px; height: 10px; background-color: black;  position: absolute; border-radius: 50%;">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="ml-4" style=" word-wrap: break-word;">
+                                <h5 id="job">Главен директор</h5>
+                                <p id="details">Описание</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style=" word-wrap: break-word;">
+                        <div class="col-3">
+                            <div class="pt-2">
+                                <h5 id="workplace1" class="times" style="color: black; "></h5>
+                                <h6 id="place1" class="text-secondary"></h6>
+                                <h6 id="year1" class="text-secondary"></h6>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center"
+                            style="width: 2px; background-color: darkgoldenrod; height: 100px;">
+                            <div
+                                style="width: 10px; height: 10px; background-color: black;  position: absolute; border-radius: 50%;">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="ml-4" style=" word-wrap: break-word;">
+                                <h5 id="job1"> </h5>
+                                <p id="details1"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style=" word-wrap: break-word;">
+                        <div class="col-3">
+                            <div class="pt-2">
+                                <h5 id="workplace2" class="times" style="color: black; "></h5>
+                                <h6 id="place2" class="text-secondary"></h6>
+                                <h6 id="year2" class="text-secondary"></h6>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center"
+                            style="width: 2px; background-color: darkgoldenrod; height: 100px;">
+                            <div
+                                style="width: 10px; height: 10px; background-color: black;  position: absolute; border-radius: 50%;">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="ml-4" style=" word-wrap: break-word;">
+                                <h5 id="job2"> </h5>
+                                <p id="details2"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="mt-5">Образование</h3>
+                    <div class="row" style=" word-wrap: break-word;">
+                        <div class="col-3">
+                            <div class="pt-2">
+                                <h5 id="class" class="times" style="color: black; ">Бакалавър</h5>
+                                <h6 id="place4" class="text-secondary">София</h6>
+                                <h6 id="year4" class="text-secondary">2024</h6>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center"
+                            style="width: 2px; background-color: darkgoldenrod; height: 100px;">
+                            <div
+                                style="width: 10px; height: 10px; background-color: black;  position: absolute; border-radius: 50%;">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="ml-4" style=" word-wrap: break-word;">
+                                <h5 id="school">Учебно заведение</h5>
+                                <p id="details4">Описание</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style=" word-wrap: break-word;">
+                        <div class="col-3">
+                            <div class="pt-2">
+                                <h5 id="class1" class="times" style="color: black; "></h5>
+                                <h6 id="place5" class="text-secondary"></h6>
+                                <h6 id="year5" class="text-secondary"></h6>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center"
+                            style="width: 2px; background-color: darkgoldenrod; height: 100px;">
+                            <div
+                                style="width: 10px; height: 10px; background-color: black;  position: absolute; border-radius: 50%;">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="ml-4" style=" word-wrap: break-word;">
+                                <h5 id="school1"> </h5>
+                                <p id="details5"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style=" word-wrap: break-word;">
+                        <div class="col-3">
+                            <div class="pt-2">
+                                <h5 id="class2" class="times" style="color: black; "></h5>
+                                <h6 id="place6" class="text-secondary"></h6>
+                                <h6 id="year6" class="text-secondary"></h6>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center"
+                            style="width: 2px; background-color: darkgoldenrod; height: 100px;">
+                            <div
+                                style="width: 10px; height: 10px; background-color: black;  position: absolute; border-radius: 50%;">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="ml-4" style=" word-wrap: break-word;">
+                                <h5 id="school2"> </h5>
+                                <p id="details6"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // document.addEventListener('DOMContentLoaded', function () {
+            // List of all IDs to load data from localStorage
+            const ids = [
+                'name', 'lastName', 'email', 'phone', 'city','info',
+                'workplace', 'place', 'year', 'job', 'details',
+                'workplace1', 'place1', 'year1', 'job1', 'details1',
+                'workplace2', 'place2', 'year2', 'job2', 'details2',
+                'class', 'place4', 'year4', 'school', 'details4',
+                'class1', 'place5', 'year5', 'school1', 'details5',
+                'class2', 'place6', 'year6', 'school2', 'details6'
+            ];
+
+            // Loop through each ID and update the corresponding element with the value from localStorage
+            ids.forEach(id => {
+                const value = localStorage.getItem(id);
+                if (value) {
+                    document.getElementById(id).innerHTML = value;;
+                    
+                }
+            });
+
+            // For the profile image (if it's stored in localStorage as base64)
+            const savedImage = localStorage.getItem('photo');
+            if (savedImage) {
+                document.getElementById('imageContainer').style.backgroundImage = `url(${savedImage})`;
+            }
+        // });
+    </script>
+    <script src="/cv/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+</body>
+
+</html>

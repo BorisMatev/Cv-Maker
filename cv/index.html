@@ -42,7 +42,7 @@
                     <div id="cvForm">
                         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
                             data-bs-smooth-scroll="true"
-                            class="scrollspy-example bg-body-tertiary p-3 rounded-2 scrolling" tabindex="0"
+                            class="scrollspy-example bg-body-tertiary p-3 rounded-2 scrolling card" tabindex="0"
                             style="height: 70vh; overflow-y: scroll;">
                             <h4 id="scrollspyHeading1">За мен</h4>
                             <div class="row mb-3">
@@ -87,7 +87,7 @@
                                 <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link" data-toggle="collapse"
+                                            <button class="btn btn-light" data-toggle="collapse"
                                                 data-target="#collapseOne" aria-expanded="true"
                                                 aria-controls="collapseOne">
                                                 Добави трудов стаж
@@ -103,8 +103,7 @@
                                                     <div class="col-6 mb-3">
                                                         <label class="form-label">Длъжност</label>
                                                         <input type="text" class="form-control"
-                                                            placeholder="Главен директор" 
-                                                            oninput="update(this,'job')">
+                                                            placeholder="Главен директор" oninput="update(this,'job')">
                                                     </div>
                                                     <div class="col-6 mb-3">
                                                         <label class="form-label">Работодател</label>
@@ -137,7 +136,7 @@
                                 <div class="card">
                                     <div class="card-header" id="headingTwo">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            <button class="btn btn-light collapsed" data-toggle="collapse"
                                                 data-target="#collapseTwo" aria-expanded="false"
                                                 aria-controls="collapseTwo">
                                                 Добави трудов стаж
@@ -151,13 +150,12 @@
                                                 <div class="col-6 mb-3">
                                                     <label class="form-label">Длъжност</label>
                                                     <input type="text" class="form-control"
-                                                        placeholder="Главен директор"
-                                                        oninput="update(this,'job1')">
+                                                        placeholder="Главен директор" oninput="update(this,'job1')">
                                                 </div>
                                                 <div class="col-6 mb-3">
                                                     <label class="form-label">Работодател</label>
                                                     <input type="text" class="form-control" placeholder="Гугъл"
-                                                    oninput="update(this,'workplace1')">
+                                                        oninput="update(this,'workplace1')">
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -169,13 +167,12 @@
                                                 <div class="col-6 mb-3">
                                                     <label class="form-label">Година</label>
                                                     <input type="text" class="form-control" placeholder="2024"
-                                                    oninput="update(this,'year1')">
+                                                        oninput="update(this,'year1')">
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="job-info" class="form-label">Подробности</label>
-                                                <textarea class="form-control" rows="3"
-                                                    placeholder="Основна информация"
+                                                <textarea class="form-control" rows="3" placeholder="Основна информация"
                                                     oninput="update(this,'details1')"></textarea>
                                             </div>
                                         </div>
@@ -184,7 +181,7 @@
                                 <div class="card">
                                     <div class="card-header" id="headingThree">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            <button class="btn btn-light collapsed" data-toggle="collapse"
                                                 data-target="#collapseThree" aria-expanded="false"
                                                 aria-controls="collapseThree">
                                                 Добави трудов стаж
@@ -198,105 +195,216 @@
                                                 <div class="col-6 mb-3">
                                                     <label class="form-label">Длъжност</label>
                                                     <input type="text" class="form-control"
-                                                        placeholder="Главен директор"
-                                                        oninput="update(this,'job2')">
+                                                        placeholder="Главен директор" oninput="update(this,'job2')">
                                                 </div>
                                                 <div class="col-6 mb-3">
                                                     <label class="form-label">Работодател</label>
                                                     <input type="text" class="form-control" placeholder="Гугъл"
-                                                    oninput="update(this,'workplace2')">
+                                                        oninput="update(this,'workplace2')">
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-6 mb-3">
                                                     <label class="form-label">Град</label>
                                                     <input type="text" class="form-control" placeholder="София"
-                                                    oninput="update(this,'place2')">
+                                                        oninput="update(this,'place2')">
                                                 </div>
                                                 <div class="col-6 mb-3">
                                                     <label class="form-label">Година</label>
                                                     <input type="text" class="form-control" placeholder="2024"
-                                                    oninput="update(this,'year2')">
+                                                        oninput="update(this,'year2')">
                                                 </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="job-info" class="form-label">Подробности</label>
-                                                <textarea class="form-control" rows="3"
-                                                    placeholder="Основна информация"
+                                                <textarea class="form-control" rows="3" placeholder="Основна информация"
                                                     oninput="update(this,'details2')"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <h4 id="scrollspyHeading3">Third heading</h4>
+                            <h4 id="scrollspyHeading3">Образование</h4>
                             </h4>
-                            <p>Text messaging, or simply texting, is the act of composing and sending electronic
-                                messages, typically consisting of alphabetic and numeric characters, between two or more
-                                users of mobile phones, tablet computers, smartwatches, desktops/laptops, or another
-                                type of compatible computer. Text messages may be sent over a cellular network or may
-                                also be sent via satellite or Internet connection.
+                            <div id="accordion1" class="mt-3 mb-5">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne1">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-light" data-toggle="collapse"
+                                                data-target="#collapseOne1" aria-expanded="true"
+                                                aria-controls="collapseOne1">
+                                                Добави образование
+                                            </button>
+                                        </h5>
+                                    </div>
 
-                                The term originally referred to messages sent using the Short Message Service (SMS) on
-                                mobile devices. It has grown beyond alphanumeric text to include multimedia messages
-                                using the Multimedia Messaging Service (MMS) and Rich Communication Services (RCS),
-                                which can contain digital images, videos, and sound content, as well as ideograms known
-                                as emoji (happy faces, sad faces, and other icons), and on various instant messaging
-                                apps. Text messaging has been an extremely popular medium of communication since the
-                                turn of the Text messaging, or simply texting, is the act of composing and sending
-                                electronic messages, typically consisting of alphabetic and numeric characters, between
-                                two or more users of mobile phones, tablet computers, smartwatches, desktops/laptops, or
-                                another type of compatible computer. Text messages may be sent over a cellular network
-                                or may also be sent via satellite or Internet connection.
-
-                                The term originally referred to messages sent using the Short Message Service (SMS) on
-                                mobile devices. It has grown beyond alphanumeric text to include multimedia messages
-                                using the Multimedia Messaging Service (MMS) and Rich Communication Services (RCS),
-                                which can contain digital images, videos, and sound content, as well as ideograms known
-                                as emoji (happy faces, sad faces, and other icons), and on various instant messaging
-                                apps. Text messaging has been an extremely popular medium of communication since the
-                                turn of the century and has also influenced changes in society.[1][2][3][4]century and
-                                has also influenced changes in society.[1][2][3][4]</p>
-                            <h4 id="scrollspyHeading4">Fifth heading</h4>
-                            <p>Text messaging, or simply texting, is the act of composing and sending electronic
-                                messages, typically consisting of alphabetic and numeric characters, between two or more
-                                users of mobile phones, tablet computers, smartwatches, desktops/laptops, or another
-                                type of compatible computer. Text messages may be sent over a cellular network or may
-                                also be sent via satellite or Internet connection.
-
-                                The term originally referred to messages sent using the Short Message Service (SMS) on
-                                mobile devices. It has grown beyond alphanumeric text to include multimedia messages
-                                using the Multimedia Messaging Service (MMS) and Rich Communication Services (RCS),
-                                which can contain digital images, videos, and sound content, as well as ideograms known
-                                as emoji (happy faces, sad faces, and other icons), and on various instant messaging
-                                apps. Text messaging has been an extremely popular medium of communication since the
-                                turn of the century and has also influenced changes in society.[1][2][3][4]
-                                Text messaging, or simply texting, is the act of composing and sending electronic
-                                messages, typically consisting of alphabetic and numeric characters, between two or more
-                                users of mobile phones, tablet computers, smartwatches, desktops/laptops, or another
-                                type of compatible computer. Text messages may be sent over a cellular network or may
-                                also be sent via satellite or Internet connection.
-
-                                The term originally referred to messages sent using the Short Message Service (SMS) on
-                                mobile devices. It has grown beyond alphanumeric text to include multimedia messages
-                                using the Multimedia Messaging Service (MMS) and Rich Communication Services (RCS),
-                                which can contain digital images, videos, and sound content, as well as ideograms known
-                                as emoji (happy faces, sad faces, and other icons), and on various instant messaging
-                                apps. Text messaging has been an extremely popular medium of communication since the
-                                turn of the century and has also influenced changes in society.[1][2][3][4]
-                                Text messaging, or simply texting, is the act of composing and sending electronic
-                                messages, typically consisting of alphabetic and numeric characters, between two or more
-                                users of mobile phones, tablet computers, smartwatches, desktops/laptops, or another
-                                type of compatible computer. Text messages may be sent over a cellular network or may
-                                also be sent via satellite or Internet connection.
-
-                                The term originally referred to messages sent using the Short Message Service (SMS) on
-                                mobile devices. It has grown beyond alphanumeric text to include multimedia messages
-                                using the Multimedia Messaging Service (MMS) and Rich Communication Services (RCS),
-                                which can contain digital images, videos, and sound content, as well as ideograms known
-                                as emoji (happy faces, sad faces, and other icons), and on various instant messaging
-                                apps. Text messaging has been an extremely popular medium of communication since the
-                                turn of the century and has also influenced changes in society.[1][2][3][4]</p>
+                                    <div id="collapseOne1" class="collapse show" aria-labelledby="headingOne1"
+                                        data-parent="#accordion1">
+                                        <div class="card-body">
+                                            <div class="expanded">
+                                                <div class="row">
+                                                    <div class="col-6 mb-3">
+                                                        <label class="form-label">Учебно заведение</label>
+                                                        <input type="text" class="form-control" placeholder="Училище"
+                                                            oninput="update(this,'school')">
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                        <label class="form-label">Степен</label>
+                                                        <input type="text" class="form-control" placeholder="Бакалавър"
+                                                            oninput="update(this,'class')">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6 mb-3">
+                                                        <label class="form-label">Град</label>
+                                                        <input type="text" class="form-control" placeholder="София"
+                                                            oninput="update(this,'place4')">
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                        <label class="form-label">Година</label>
+                                                        <input type="text" class="form-control" placeholder="2024"
+                                                            oninput="update(this,'year4')">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Подробности</label>
+                                                    <textarea class="form-control" rows="3"
+                                                        placeholder="Основна информация"
+                                                        oninput="update(this,'details4')"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo2">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-light collapsed" data-toggle="collapse"
+                                                data-target="#collapseTwo2" aria-expanded="false"
+                                                aria-controls="collapseTwo2">
+                                                Добави образование
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2"
+                                        data-parent="#accordion1">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Учебно заведение</label>
+                                                    <input type="text" class="form-control" placeholder="Училище"
+                                                        oninput="update(this,'school1')">
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Степен</label>
+                                                    <input type="text" class="form-control" placeholder="Бакалавър"
+                                                        oninput="update(this,'class1')">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Град</label>
+                                                    <input type="text" class="form-control" placeholder="София"
+                                                        oninput="update(this,'place5')">
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Година</label>
+                                                    <input type="text" class="form-control" placeholder="2024"
+                                                        oninput="update(this,'year5')">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Подробности</label>
+                                                <textarea class="form-control" rows="3" placeholder="Основна информация"
+                                                    oninput="update(this,'details5')"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree3">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-light collapsed" data-toggle="collapse"
+                                                data-target="#collapseThree3" aria-expanded="false"
+                                                aria-controls="collapseThree3">
+                                                Добави образование
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree3" class="collapse" aria-labelledby="headingThree3"
+                                        data-parent="#accordion1">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Учебно заведение</label>
+                                                    <input type="text" class="form-control" placeholder="Училище"
+                                                        oninput="update(this,'school2')">
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Степен</label>
+                                                    <input type="text" class="form-control" placeholder="Бакалавър"
+                                                        oninput="update(this,'class2')">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Град</label>
+                                                    <input type="text" class="form-control" placeholder="София"
+                                                        oninput="update(this,'place6')">
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <label class="form-label">Година</label>
+                                                    <input type="text" class="form-control" placeholder="2024"
+                                                        oninput="update(this,'year6')">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Подробности</label>
+                                                <textarea class="form-control" rows="3" placeholder="Основна информация"
+                                                    oninput="update(this,'details6')"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 id="scrollspyHeading4">Още информация</h4>
+                            <div class="card p-4">
+                                <h2>Форма за въвеждане на информация</h2>
+                                <form id="networkForm">
+                                    <!-- Блок за линкове -->
+                                    <div class="mb-3">
+                                        <label class="form-label">Линкове</label>
+                                        <div id="linksContainer">
+                                            <button type="button" class="btn btn-info" id="toggleLinkFormBtn">Добави линк</button>
+                                            <div id="linkFormContainer" class="mt-3" style="display: none;">
+                                                <div class="mb-2">
+                                                    <label for="link1" class="form-label">Линк към мрежата</label>
+                                                    <input type="url" class="form-control mb-2" id="link1" name="link1">
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label for="linkName1" class="form-label">Име на линка</label>
+                                                    <input type="text" class="form-control mb-2" id="linkName1" name="linkName1">
+                                                </div>
+                                                <button type="button" class="btn btn-success" id="addLinkBtn">Добави линк</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <!-- Поле за език -->
+                                    <div class="mb-3 mt-4">
+                                        <label for="language" class="form-label">Език</label>
+                                        <input type="text" class="form-control" id="language" required>
+                                    </div>
+                    
+                                    <!-- Поле за хобита -->
+                                    <div class="mb-3">
+                                        <label for="hobbies" class="form-label">Хобита</label>
+                                        <input type="text" class="form-control" id="hobbies" required>
+                                    </div>
+                    
+                                    <button type="submit" class="btn btn-primary">Изпрати</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -406,6 +514,70 @@
                                             <div class="ml-4" style=" word-wrap: break-word;">
                                                 <h5 id="job2"> </h5>
                                                 <p id="details2"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3 class="mt-5">Образование</h3>
+                                    <div class="row" style=" word-wrap: break-word;">
+                                        <div class="col-3">
+                                            <div class="pt-2">
+                                                <h5 id="class" class="times" style="color: black; ">Бакалавър</h5>
+                                                <h6 id="place4" class="text-secondary">София</h6>
+                                                <h6 id="year4" class="text-secondary">2024</h6>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"
+                                            style="width: 2px; background-color: darkgoldenrod; height: 100px;">
+                                            <div
+                                                style="width: 10px; height: 10px; background-color: black;  position: absolute; border-radius: 50%;">
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="ml-4" style=" word-wrap: break-word;">
+                                                <h5 id="school">Учебно заведение</h5>
+                                                <p id="details4">Описание</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style=" word-wrap: break-word;">
+                                        <div class="col-3">
+                                            <div class="pt-2">
+                                                <h5 id="class1" class="times" style="color: black; "></h5>
+                                                <h6 id="place5" class="text-secondary"></h6>
+                                                <h6 id="year5" class="text-secondary"></h6>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"
+                                            style="width: 2px; background-color: darkgoldenrod; height: 100px;">
+                                            <div
+                                                style="width: 10px; height: 10px; background-color: black;  position: absolute; border-radius: 50%;">
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="ml-4" style=" word-wrap: break-word;">
+                                                <h5 id="school1"> </h5>
+                                                <p id="details5"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style=" word-wrap: break-word;">
+                                        <div class="col-3">
+                                            <div class="pt-2">
+                                                <h5 id="class2" class="times" style="color: black; "></h5>
+                                                <h6 id="place6" class="text-secondary"></h6>
+                                                <h6 id="year6" class="text-secondary"></h6>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center align-items-center"
+                                            style="width: 2px; background-color: darkgoldenrod; height: 100px;">
+                                            <div
+                                                style="width: 10px; height: 10px; background-color: black;  position: absolute; border-radius: 50%;">
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="ml-4" style=" word-wrap: break-word;">
+                                                <h5 id="school2"> </h5>
+                                                <p id="details6"></p>
                                             </div>
                                         </div>
                                     </div>
