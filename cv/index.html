@@ -15,8 +15,35 @@
 </head>
 
 <body>
-    <header style="height: 70px; background-color: cadetblue;">
-        <button class="btn btn-primary" onclick="download()"> Изтегли</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger" id="exampleModalLabel">Предупреждение</h5>
+                </div>
+                <div class="modal-body">
+                    С това действие ще изтриете своя профил!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
+                    <button type="button" class="btn btn-danger" onclick="logout()">Изтрий</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header style="height: 70px; background-color: cadetblue;"
+        class="d-flex justify-content-between align-items-center">
+        <img src="/assets/icon.png" style="height: 40px;" class="ml-4">
+        <h1 class="ml-4 times" style="color: black;">THE FORGE</h1>
+        <div class="dropdown">
+            <div class="mr-4 rounded-circle profileImage border border-dark" style="height: 40px;" type="button"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </div>
+            <div class="dropdown-menu logout" aria-labelledby="dropdownMenuButton">
+                <button class="btn text-danger" style="border: none; box-shadow: none;" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Изтрий</button>
+            </div>
+        </div>
     </header>
     <nav id="navbar-example2" class="navbar bg-body-tertiary" style="height: 50px; padding-top: 0px;">
         <ul class="nav nav-pills d-flex justify-content-between w-50">
@@ -38,7 +65,11 @@
         <div class="row">
             <div class="col-12 col-lg-6 order-2 order-lg-1">
                 <div class="form-container">
-                    <h3 class="mt-3 mt-md-1 ml-4">Създай своята автобиография</h3>
+                    <div class="d-flex justify-content-between align-items-center flex-wrap my-1">
+                        <h3 class="">Създай своята автобиография</h3>
+                        <button class="btn btn-dark d-none previewBtn"
+                            onclick="window.location.href = '/preview'">Преглед</button>
+                    </div>
                     <div id="cvForm">
                         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
                             data-bs-smooth-scroll="true"
@@ -49,7 +80,7 @@
                                 <div class="col-6">
                                     <label class="form-label">Име</label>
                                     <input type="text" class="form-control" placeholder="Иван" id="iName"
-                                        oninput="update(this,'name')" maxlength="12">
+                                        autocomplete="off" oninput="update(this,'name')" maxlength="12">
                                 </div>
                                 <div class="col-6">
                                     <label class="form-label">Фаминлия</label>
@@ -77,13 +108,13 @@
                                 <textarea class="form-control" rows="4" placeholder="Въведи кратка информация"
                                     oninput="update(this,'info')" maxlength="250"></textarea>
                             </div>
-                            <button type="button" class="btn btn-primary"
+                            <button type="button" class="btn btn-info"
                                 onclick="document.getElementById('imageInput').click();">Добави снимка</button>
                             <input type="file" id="imageInput" class="custom-file-input" accept="image/*">
 
                             <hr class="bg-secondary border-2 border-top border-secondary mt-2 mb-5" />
                             <h4 id="scrollspyHeading2">Трудов стаж</h4>
-                            <div id="accordion" class="mt-3 mb-5">
+                            <div id="accordion" class="mt-2 mb-5">
                                 <div class="card">
                                     <div class="card-header" id="headingOne">
                                         <h5 class="mb-0">
@@ -226,7 +257,7 @@
                             </div>
                             <h4 id="scrollspyHeading3">Образование</h4>
                             </h4>
-                            <div id="accordion1" class="mt-3 mb-5">
+                            <div id="accordion1" class="mt-2 mb-5">
                                 <div class="card">
                                     <div class="card-header" id="headingOne1">
                                         <h5 class="mb-0">
@@ -369,13 +400,22 @@
                             </div>
                             <h4 id="scrollspyHeading4">Още информация</h4>
                             <div class="card p-4">
-                                <h2>Форма за въвеждане на информация</h2>
-                                <form id="networkForm">
-                                    <!-- Блок за линкове -->
+                                <div id="networkForm">
                                     <div class="mb-3">
                                         <label class="form-label">Линкове</label>
                                         <div id="linksContainer">
-                                            <button type="button" class="btn btn-info" id="toggleLinkFormBtn">Добави линк</button>
+                                            <div class="row mb-3">
+                                                <div class="col-6">
+                                                    <label class="form-label">Име</label>
+                                                    <input type="text" class="form-control" placeholder="Github" id="iName"
+                                                        autocomplete="off" oninput="update(this,'network')">
+                                                </div>
+                                                <div class="col-6">
+                                                    <label class="form-label">Линк</label>
+                                                    <input type="text" class="form-control" placeholder="https://github.com/" id=""
+                                                        oninput="update(this,'link')">
+                                                </div>
+                                            </div>
                                             <div id="linkFormContainer" class="mt-3" style="display: none;">
                                                 <div class="mb-2">
                                                     <label for="link1" class="form-label">Линк към мрежата</label>
@@ -383,44 +423,56 @@
                                                 </div>
                                                 <div class="mb-2">
                                                     <label for="linkName1" class="form-label">Име на линка</label>
-                                                    <input type="text" class="form-control mb-2" id="linkName1" name="linkName1">
+                                                    <input type="text" class="form-control mb-2" id="linkName1"
+                                                        name="linkName1">
                                                 </div>
-                                                <button type="button" class="btn btn-success" id="addLinkBtn">Добави линк</button>
+                                                <button type="button" class="btn btn-success" id="addLinkBtn">Добави
+                                                    линк</button>
                                             </div>
                                         </div>
                                     </div>
-                    
-                                    <!-- Поле за език -->
                                     <div class="mb-3 mt-4">
-                                        <label for="language" class="form-label">Език</label>
-                                        <input type="text" class="form-control" id="language" required>
+                                        <label class="form-label">Език</label>
+                                        <textarea class="form-control" rows="3" placeholder="Английски език - C1"
+                                            oninput="update(this,'language')"></textarea>
                                     </div>
-                    
-                                    <!-- Поле за хобита -->
                                     <div class="mb-3">
-                                        <label for="hobbies" class="form-label">Хобита</label>
-                                        <input type="text" class="form-control" id="hobbies" required>
+                                        <label class="form-label">Хобита</label>
+                                        <input type="text" class="form-control" placeholder="Музика, Спорт"
+                                            oninput="update(this,'hobbies')">
                                     </div>
-                    
-                                    <button type="submit" class="btn btn-primary">Изпрати</button>
-                                </form>
+
+                                </div>
                             </div>
+                            <button type="submit" class="mt-3 btn btn-info" onclick="download()">Изтегли</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-6 order-1 order-lg-2 cv">
                 <div class="container mt-5 rightSpace rounded">
-                    <div id="content">
+                    <div id="content" style="height: 1121px;">
                         <div class="container">
-                            <div class="row" style="height: 1110px;">
+                            <div class="row" style="height: 1121px;">
                                 <section class="col-4"
                                     style="background-color: rgba(44,58,75,255); word-wrap: break-word;">
                                     <div id="imageContainer"
                                         class="rounded-circle border border-light mt-3 d-flex justify-content-center align-items-center profileImage">
                                     </div>
                                     <h2 class="times">За мен</h2>
-                                    <p id="info" class="text-light"></p>
+                                    <p id="info" class="text-light">Подробна информация</p>
+                                    <hr class="bg-warning border-2 border-top border-warning my-4">
+                                    <h2 class="times">Линк</h2>
+                                    <h5 class="text-light" style="margin: 0px;" id="network">Github</h5>
+                                    <p class="btn-link" id="link">https://github.com/</p>
+                                    <hr class="bg-warning border-2 border-top border-warning my-4">
+                                    <h2 class="times">Език</h2>
+                                    <h5 class="text-light" style="margin: 0px;" id="language">Английски език - C1
+                                        <br>Руски език - B2
+                                    </h5>
+                                    <hr class="bg-warning border-2 border-top border-warning my-4">
+                                    <h2 class="times">Хоби</h2>
+                                    <h5 class="text-light" id="hobbies" style="margin: 0px;">Музика, Спорт</h5>
                                 </section>
                                 <div class="col-8 pt-3">
                                     <div class="d-flex justify-content-between mt-5">
@@ -542,7 +594,7 @@
                                     <div class="row" style=" word-wrap: break-word;">
                                         <div class="col-3">
                                             <div class="pt-2">
-                                                <h5 id="class1" class="times" style="color: black; "></h5>
+                                                <h5 id="class1" class="times" style="color: black;"></h5>
                                                 <h6 id="place5" class="text-secondary"></h6>
                                                 <h6 id="year5" class="text-secondary"></h6>
                                             </div>
@@ -576,7 +628,7 @@
                                         </div>
                                         <div class="col-8">
                                             <div class="ml-4" style=" word-wrap: break-word;">
-                                                <h5 id="school2"> </h5>
+                                                <h5 id="school2"></h5>
                                                 <p id="details6"></p>
                                             </div>
                                         </div>
@@ -589,7 +641,21 @@
             </div>
         </div>
     </main>
-
+    <script>
+        document.getElementById('imageInput').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imageUrl = e.target.result;
+                    localStorage.setItem('photo', imageUrl);
+                    document.getElementById('imageContainer').style.backgroundImage = `url(${imageUrl})`;
+                    document.getElementById('dropdownMenuButton').style.backgroundImage = `url(${imageUrl})`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
     <script src="main.js"></script>
     <!-- Pdf -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>

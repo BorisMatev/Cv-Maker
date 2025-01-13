@@ -22,12 +22,16 @@
     padding: 0px;
 }
 
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
 }
 
+.logout  {
+    position: absolute !important;
+    left: -140px;
+}
+
 .profileImage {
-    width: 100%;
     aspect-ratio: 1 / 1;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,8 +58,11 @@ h6 {
         display: none;
     }
 }
-@media screen and (max-width: 578px) {
+@media screen and (max-width: 768px) {
     .cv{
         display: none;
+    }
+    .previewBtn{
+        display: block !important;
     }
 }
